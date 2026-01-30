@@ -1,7 +1,6 @@
 package tennis
 
 import (
-	"fmt"
 	"tennis/game"
 )
 
@@ -17,51 +16,42 @@ func New() Set {
 
 // CurrentGameNo gibt die Nummer des aktuellen Spiels im Satz zurück.
 func (s Set) CurrentGameNo() int {
-	return len(s.games)
+	// TODO
+	return 0
 }
 
 // CurrentGame gibt das aktuelle Spiel im Satz zurück.
 func (s Set) CurrentGame() *game.Game {
-	return &s.games[s.CurrentGameNo()-1]
+	// TODO
+	return nil
 }
 
 // ScoreP1 erhöht den Punktestand von Spieler 1 im aktuellen Spiel.
 func (s *Set) ScoreP1() {
-	s.CurrentGame().ScoreP1()
+	// TODO
 }
 
 // ScoreP2 erhöht den Punktestand von Spieler 2 im aktuellen Spiel.
 func (s *Set) ScoreP2() {
-	s.CurrentGame().ScoreP2()
+	// TODO
 }
 
 // CurrentGamesP1 gibt die Anzahl der gewonnenen Spiele von Spieler 1 im Satz zurück.
 func (s Set) CurrentGamesP1() int {
-	count := 0
-	for _, g := range s.games {
-		if g.P1Wins() {
-			count++
-		}
-	}
-	return count
+	// TODO
+	return 0
 }
 
 // CurrentGamesP2 gibt die Anzahl der gewonnenen Spiele von Spieler 2 im Satz zurück.
 func (s Set) CurrentGamesP2() int {
-	count := 0
-	for _, g := range s.games {
-		if g.P2Wins() {
-			count++
-		}
-	}
-	return count
+	// TODO
+	return 0
 }
 
 // String gibt den aktuellen Satzstand als String zurück.
 // Dabei wird zunächst der Stand der fertigen Spiele angezeigt,
 // gefolgt vom Punktestand des aktuellen Spiels.
 func (s Set) String() string {
-	result := fmt.Sprintf("%d-%d\n", s.CurrentGamesP1(), s.CurrentGamesP2())
-	result += fmt.Sprintf("%s\n", s.CurrentGame())
-	return result
+	// TODO
+	return ""
 }
