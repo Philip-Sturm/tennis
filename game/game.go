@@ -37,35 +37,47 @@ func (g Game) String() string {
 // ScoreP1 erhöht den Punktestand von Spieler 1 um einen Punkt.
 // Wenn Spieler 1 gewinnt, wird sein Punktestand auf "Win" gesetzt.
 func (g *Game) ScoreP1() {
-	// TODO
+	g.p1++
 }
 
 // ScoreP2 erhöht den Punktestand von Spieler 2 um einen Punkt.
 // Wenn Spieler 2 gewinnt, wird sein Punktestand auf "Win" gesetzt.
 func (g *Game) ScoreP2() {
-	// TODO
+	g.p2++
 }
 
 // AdvantageP1 überprüft, ob Spieler 1 im Vorteil ist.
 func (g Game) AdvantageP1() bool {
-	// TODO
-	return false
+	if g.p1 > 3 && g.p1 != g.p2 {
+		return true
+	} else {
+		return false
+	}
 }
 
 // AdvantageP2 überprüft, ob Spieler 2 im Vorteil ist.
 func (g Game) AdvantageP2() bool {
-	// TODO
-	return false
+	if g.p2 > 3 && g.p1 != g.p2 {
+		return true
+	} else {
+		return false
+	}
 }
 
 // P1Wins überprüft, ob Spieler 1 das Spiel gewonnen hat.
 func (g Game) P1Wins() bool {
-	// TODO
-	return false
+	if g.p1 > 3 && g.p1-g.p2 > 1 {
+		return true
+	} else {
+		return false
+	}
 }
 
 // P2Wins überprüft, ob Spieler 2 das Spiel gewonnen hat.
 func (g Game) P2Wins() bool {
-	// TODO
-	return false
+	if g.p2 > 3 && g.p2-g.p1 > 1 {
+		return true
+	} else {
+		return false
+	}
 }
