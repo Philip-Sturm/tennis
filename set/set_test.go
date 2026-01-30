@@ -51,7 +51,7 @@ func ExampleSet_String() {
 	// 0:0
 	//
 	// 0-0
-	// 30:15
+	// 2:1
 	//
 	// 1-0
 	// Player 1 wins
